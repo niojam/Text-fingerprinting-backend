@@ -2,7 +2,6 @@ package ee.ringit.textfingerprint.api;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import ee.ringit.textfingerprint.api.error.BusinessLogicErrorResponse;
-import ee.ringit.textfingerprint.api.error.ErrorResponse;
 import ee.ringit.textfingerprint.dto.FileFingerprintResponse;
 import ee.ringit.textfingerprint.exception.InvalidFileException;
 import ee.ringit.textfingerprint.service.FingerPrintService;
@@ -10,7 +9,6 @@ import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
