@@ -4,6 +4,8 @@ import java.io.*;
 import java.nio.charset.Charset;
 import java.util.stream.Collectors;
 
+import static ee.ringit.textfingerprint.util.Constants.LINE_SEPARATOR_KEY;
+
 public class FileReaderUtil {
 
     public static BufferedReader getBufferedReaderFromInputData(InputStream inputData, Charset charset) {
@@ -12,7 +14,7 @@ public class FileReaderUtil {
     }
 
     public static String getBufferReaderContentLineBreakSensitive(BufferedReader bufferedReader) {
-       return bufferedReader.lines().collect(Collectors.joining(System.getProperty("line.separator"))); // #TODo Separate class
+       return bufferedReader.lines().collect(Collectors.joining(System.getProperty(LINE_SEPARATOR_KEY)));
     }
 
 }

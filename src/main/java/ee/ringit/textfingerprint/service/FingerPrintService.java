@@ -10,6 +10,7 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Optional;
 
+import static ee.ringit.textfingerprint.util.Constants.LINE_SEPARATOR_KEY;
 import static ee.ringit.textfingerprint.util.FileReaderUtil.*;
 
 
@@ -42,7 +43,7 @@ public class FingerPrintService {
     }
 
     private Optional<String> getExistingTextFromFileIfExists(BufferedReader bufferedReader) {
-        String lineSeparator = System.getProperty("line.separator");
+        String lineSeparator = System.getProperty(LINE_SEPARATOR_KEY);
         try {
             return bufferedReader.ready()
                     ? Optional.of(getBufferReaderContentLineBreakSensitive(bufferedReader).concat(lineSeparator))
